@@ -78,8 +78,8 @@ int main()	{
                   << "\n6. Exit"
                   << "\nYour Choice: ";
 
-
         std::cin >> choice;
+
         switch(choice)  {
             case '1':   {
                 std::cout << peekHighestPriority(heapArr);
