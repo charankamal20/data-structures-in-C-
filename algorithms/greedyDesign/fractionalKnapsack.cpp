@@ -6,7 +6,7 @@ float knapSackSize = 15.00;
 typedef std::pair<float, float> Object; // wietght // profit
 
 int partition(std::vector<Object> &objects, int start, int end) {
-  float pivot = (objects[end].first) / (objects[end].second); // pivot element
+float pivot = (objects[end].first) / (objects[end].second); // pivot element
   int i = (start - 1);
 
   for (int j = start; j <= end - 1; j++) {
@@ -51,7 +51,7 @@ int knapsack(std::vector<Object> &objects) {
       objects[i].second = knapSackSize * (objects[i].second / objects[i].first);
       objects[i].first = knapSackSize;
       profit = profit + objects[i].second;
-
+      
       knapSackSize -= objects[i].first;
       i++;
       break;
